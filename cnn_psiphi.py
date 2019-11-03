@@ -81,9 +81,4 @@ model.fit_generator(
 	
 #Saving weights
 
-from tensorflow.keras.models import model_from_json
-model_json = model.to_json()
-with open("Final.json", "w") as json_file:
-    json_file.write(model_json)
-model.save_weights("Final.h5")
-print("Model Saved to disk")
+model.save('model.h5')
